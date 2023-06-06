@@ -28,6 +28,21 @@ nav a:hover{
 }
 
 nav a.active{
-    background: var(--color-bg);
-    color: var(--color-white);
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+/*---------------Media queries (Medium devices)------------------*/
+@media screen and (max-width: 1024px){
+    nav{
+        left: 35%;
+    }
+    
+}
+
+/*---------------Media queries (small devices)------------------*/
+@media screen and (max-width: 600px){
+    nav{
+        left: 15%;
+    }
 }

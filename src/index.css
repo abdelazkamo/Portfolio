@@ -23,7 +23,7 @@
     --transition: all 400ms ease;
     --container-widh-lg: 75%;
     --container-widh-md: 86%;
-    --container-widh-ms: 90%;
+    --container-widh-sm: 90%;
 }
 
 html {
@@ -61,7 +61,6 @@ h1 {
 
 section {
     margin-top: 8rem;
-    height: 100vh;
 }
 
 section > h2, section > h5{

@@ -7,7 +7,6 @@ import Porfolio from './components/porfolio/porfolio'
 import Services from './components/services/services'
 import Contact from './components/contact/contact'
 import Experience from './components/experience/experience'
-import Testimonials from './components/testimonials/testimonials'
 import Footer from './components/footer/footer'
 
 const App = () => {
@@ -20,7 +19,6 @@ const App = () => {
       <Services/>
       <Porfolio/>
       <Contact/>
-      <Testimonials/>
       <Footer/>
     </>
   )
