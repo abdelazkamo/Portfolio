@@ -12,9 +12,6 @@ const socials = () => {
       <a href="https://github.com/abdelazkamo" target="_blank">
         <BsGithub />
       </a>
-      <a href="https://twitter.com" target="_blank">
-        <FaTwitter />
-      </a>
     </div>
   );
 };

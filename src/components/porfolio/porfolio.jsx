@@ -5,6 +5,7 @@ import kamobazaar from "../../assets/kamobazaar.png";
 import IMG2 from "../../assets/iwe.png";
 import IMG3 from "../../assets/portfolio3.jpg";
 import IMG4 from "../../assets/luggage.png";
+import IMG7 from "../../assets/autoflow.png";
 import IMG5 from "../../assets/lung.png";
 import IMG6 from "../../assets/portfolio6.jpg";
 
@@ -18,7 +19,7 @@ const porfolio = () => {
       tech: "React, TypeScript, Material UI, Node.js",
     },
     {
-      img: IMG4,
+      img: IMG7,
       title: "Automation Flow",
       github:
         "https://github.com/abdelazkamo/Automation-flow-diagram-using-ReactFlow",

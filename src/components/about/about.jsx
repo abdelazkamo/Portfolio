@@ -28,7 +28,7 @@ const about = () => {
               <FaLanguage className="about__icon" />
               <h5>Languages</h5>
               <small>
-                French (Native), English (C1), Turkish (B2), German (A1)
+                French (Native), English (C1), Turkish (B2), German (A2)
               </small>
             </article>
             <article className="about__card">
@@ -39,14 +39,19 @@ const about = () => {
             <article className="about__card">
               <VscLocation className="about__icon" />
               <h5>Adress</h5>
-              <small>Stuttgart, Germany</small>
+              <small>Ludwigshafen, Germany</small>
             </article>
           </div>
-          <p>
-            Professional full-stack developer with 4+ years of experience mostly
-            in frontend development, specializing in React, JavaScript, and
-            TypeScript. Proven track record in improving application
-            performance, leading teams, and enhancing user engagement. Dedicated
+          <p style={{ textAlign: "justify" }}>
+            Professional Software Developer with 4+ years of experience,
+            specializing in developing scalable web applications and working on
+            machine learning projects. I have extensive expertise in both
+            frontend and backend development using technologies like React,
+            TypeScript, Node.js, GraphQL, and Python. Experienced in DevOps
+            practices, including containerization and orchestration with Docker
+            and Kubernetes, ensuring smooth deployment and scalability of
+            applications. Proven track record in improving application
+            performance, leading teams, and enhancing user engagement. Committed
             to delivering high-quality solutions and staying updated with
             industry trends.
           </p>
