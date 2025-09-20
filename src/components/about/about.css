@@ -66,6 +66,17 @@
   color: var(--color-light);
 }
 
+.see-all-btn {
+  background: transparent;
+  color: var(--color-primary);
+  transition: var(--transition);
+  margin-left: 0.5rem;
+}
+
+.see-all-btn:hover {
+  cursor: pointer;
+}
+
 /*---------------Media queries (Medium devices)------------------*/
 @media screen and (max-width: 1024px) {
   .about__container {
