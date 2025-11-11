@@ -52,7 +52,7 @@ const skills = {
     { name: "PyTorch", level: "Experienced" },
     { name: "Scikit-learn", level: "Experienced" },
     { name: "Pandas", level: "Experienced" },
-    { name: "OpenCV", level: "Experienced" },
+    { name: "Azure AI Foundry", level: "Experienced" },
   ],
   projectManagement: [
     { name: "Git", level: "Experienced" },

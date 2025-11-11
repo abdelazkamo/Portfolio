@@ -1,9 +1,9 @@
 import React from "react";
 import "./nav.css";
-import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
+import { AiOutlineHome, AiOutlineUser , AiOutlinePaperClip} from "react-icons/ai";
 import { BiBook } from "react-icons/bi";
-import { RiServiceLine } from "react-icons/ri";
-import { TbMessageCircle } from "react-icons/tb";
+import {  } from "react-icons/ri";
+import { TbMessageCircle, TbProgress } from "react-icons/tb";
 import { useState } from "react";
 
 const Nav = () => {
@@ -30,9 +30,9 @@ const Nav = () => {
         onClick={() => setActiveNav("#experience")}
         className={activeNav === "#experience" ? "active" : ""}
       >
-        <BiBook />
+        < TbProgress/>
       </a>
-      {/* <a href='#services' onClick={()=> setActiveNav('#services')} className={ activeNav==='#services' ? 'active' : ''}><RiServiceLine/></a> */}
+      <a href='#porfolio' onClick={()=> setActiveNav('#porfolio')} className={ activeNav==='#porfolio' ? 'active' : ''}><BiBook/></a>
       <a
         href="#contact"
         onClick={() => setActiveNav("#contact")}

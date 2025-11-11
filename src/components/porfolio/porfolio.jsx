@@ -1,118 +1,65 @@
 import React from "react";
 import "./porfolio.css";
-import IMG1 from "../../assets/qdisco.jpg";
-import kamobazaar from "../../assets/kamobazaar.png";
-import IMG2 from "../../assets/iwe.png";
-import IMG3 from "../../assets/portfolio3.jpg";
-import IMG4 from "../../assets/luggage.png";
-import IMG7 from "../../assets/autoflow.png";
-import IMG5 from "../../assets/lung.png";
-import IMG6 from "../../assets/portfolio6.jpg";
+import { Brain, FileText, MessageSquare, PenTool } from "lucide-react";
+import { BsPatchCheckFill } from "react-icons/bs";
 
-const porfolio = () => {
-  const projects = [
-    {
-      img: IMG4,
-      title: "Luggage swap",
-      github: "https://github.com/abdelazkamo/luggageswag-frontend",
-      live: null,
-      tech: "React, TypeScript, Material UI, Node.js",
-    },
-    {
-      img: IMG7,
-      title: "Automation Flow",
-      github:
-        "https://github.com/abdelazkamo/Automation-flow-diagram-using-ReactFlow",
-      live: null,
-      tech: "React, ReactFlow, TypeScript, Material UI, Redux",
-    },
-    {
-      img: kamobazaar,
-      title: "Kamobazaar",
-      github: "https://github.com/abdelazkamo/kamobazaar",
-      live: null,
-      tech: "React, TypeScript",
-    },
-    {
-      img: IMG1,
-      title: "QDisco",
-      github: null,
-      live: null,
-      tech: "Vue, JavaScript",
-    },
-    {
-      img: IMG2,
-      title: "IWE",
-      github: null,
-      live: "https://xn--iw-cja.com/",
-      tech: "Ionic, TypeScript",
-    },
-    {
-      img: IMG3,
-      title: "Ischolar",
-      github: null,
-      live: null,
-      tech: "Ionic, TypeScript",
-    },
-    {
-      img: IMG5,
-      title: "Lung Disease Detection",
-      github: "https://github.com/abdelazkamo/Lung",
-      live: null,
-      tech: "Python, Tensorflow, CNN, FastAPI, React",
-    },
-    {
-      img: IMG6,
-      title: "Fill Up",
-      github: "https://github.com/abdelazkamo/fill-up",
-      live: null,
-      tech: "Ionic, TypeScript",
-    },
-  ];
+const projects = [
+  {
+    title: "Rapid Access to Production Defect Data in Manufacturing",
+    description:
+      "Designed a multi-agent chatbot orchestrator using an MCP server and Azure AI Connected Agents, enabling production teams to query defect data and perform root-cause analysis through natural language prompts. This solution provides real-time insights into internal and external quality issues.",
+    icon: MessageSquare,
+  },
+  {
+    title: "OCR Agentic Invoice Reader with Azure AI Document Intelligence",
+    description:
+      "Developed an automated workflow combining RPA bots, AI document processing, and approval logic to extract key data from incoming invoices and route them to ERP systems or reporting dashboards.",
+    icon: FileText,
+  },
+  {
+    title: "Digital Signature Integration",
+    description:
+      "Integrated a secure digital signing solution into MES workflows, allowing internal users and external contractors to approve documents digitally. This strengthened security, compliance, and trust within enterprise-grade systems.",
+    icon: PenTool,
+  },
+  {
+    title: "Work-Order Scheduling Optimization",
+    description:
+      "Built an AI agent system that helps managers optimize daily, weekly, and monthly work-order scheduling using Azure AI Foundry LLMs and prompt engineering. The system dynamically balances capacity and deadlines to maximize efficiency.",
+    icon: Brain,
+  },
+];
+
+const ProjectsSection = () => {
   return (
-    <section id="portfolio">
+    <section id="porfolio">
       <h5>My Recent Work</h5>
-      <h2>Projects</h2>
+      <h2 className="section-title">Projects</h2>
+      <div className="container">
 
-      <div className="container portfolio__container">
-        {projects.map((item) => {
-          return (
-            <article className="portfolio__item">
-              <div className="portfolio__item-image">
-                <img
-                  style={{ height: "20rem" }}
-                  src={item.img}
-                  alt={item.title}
-                />
+        <div className="projects-grid">
+          {projects.map((project, index) => {
+            const Icon = project.icon;
+            return (
+              <div className="project-card" key={index}>
+                <div className="card-icon">
+                  <Icon className="icon" />
+                </div>
+                <article className="experience__details" key={index}>
+                  <BsPatchCheckFill className="experience__details-icon" />
+                  <div>
+                    <h4 style={{ color: '#fff' }}>{project.title}</h4>
+                    <small className="text-light"></small>
+                  </div>
+                </article>
+                <p className="card-description ">{project.description}</p>
               </div>
-              <h3>{item.title}</h3>
-              <div className="tech">{item.tech}</div>
-              <div className="portfolio__item-cta">
-                <a
-                  href={item.github}
-                  className={!item.github ? "btn-disabled" : "btn"}
-                  target="_blank"
-                  disabled={!item.github}
-                >
-                  GitHub
-                </a>
-                {/* <a
-                  href={item.live}
-                  className={
-                    !item.live ? "btn-live-disabled" : "btn btn-primary"
-                  }
-                  target="_blank"
-                  disabled={!item.live}
-                >
-                  Live Demo
-                </a> */}
-              </div>
-            </article>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );
 };
 
-export default porfolio;
+export default ProjectsSection;
