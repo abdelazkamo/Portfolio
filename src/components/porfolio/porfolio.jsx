@@ -1,7 +1,8 @@
 import React from "react";
 import "./porfolio.css";
-import { Brain, FileText, MessageSquare, PenTool } from "lucide-react";
+import { Brain, FileText, MessageSquare, PenTool, Stethoscope } from "lucide-react";
 import { BsPatchCheckFill } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
@@ -28,6 +29,13 @@ const projects = [
       "Built an AI agent system that helps managers optimize daily, weekly, and monthly work-order scheduling using Azure AI Foundry LLMs and prompt engineering. The system dynamically balances capacity and deadlines to maximize efficiency.",
     icon: Brain,
   },
+  {
+    title: "Lung Disease Detection using Deep Learning",
+    description:
+      "This project focuses on detecting lung diseases from CT images using deep learning techniques. It involves building and comparing various Convolutional Neural Network (CNN) models to achieve high accuracy in disease classification.",
+    icon: Stethoscope,
+    github: "https://github.com/abdelazkamo/Lung-AI",
+  },
 ];
 
 const ProjectsSection = () => {
@@ -36,7 +44,6 @@ const ProjectsSection = () => {
       <h5>My Recent Work</h5>
       <h2 className="section-title">Projects</h2>
       <div className="container">
-
         <div className="projects-grid">
           {projects.map((project, index) => {
             const Icon = project.icon;
@@ -45,14 +52,25 @@ const ProjectsSection = () => {
                 <div className="card-icon">
                   <Icon className="icon" />
                 </div>
-                <article className="experience__details" key={index}>
+
+                <article className="experience__details">
                   <BsPatchCheckFill className="experience__details-icon" />
                   <div>
-                    <h4 style={{ color: '#fff' }}>{project.title}</h4>
-                    <small className="text-light"></small>
+                    <h4 style={{ color: "#fff" }}>{project.title}</h4>
                   </div>
                 </article>
-                <p className="card-description ">{project.description}</p>
+
+                <p className="card-description">{project.description}</p>
+
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="github-link"
+                  >
+                    <FaGithub className="github-icon" />
+                  </a>)}
               </div>
             );
           })}
